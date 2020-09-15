@@ -124,7 +124,6 @@
             }
 
             close() {
-                withdrawFruit('L')
                 this.elem.classList.toggle('is-active')
                 this.on_close()
             }
@@ -151,6 +150,7 @@
             }
 
             on_close() {
+                withdrawFruit('L')
                 var event = new Event('modal:close')
 
                 this.elem.dispatchEvent(event);
