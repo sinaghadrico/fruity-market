@@ -91,7 +91,7 @@
             </section>
             <footer class="modal-card-foot">
                 <button class="button is-success" onclick="withdrawFruit('H')">Mark as paid</button>
-                <button class="button" data-bulma-modal="close" onclick="withdrawFruit('L')">Cancel</button>
+                <button class="button" data-bulma-modal="close">Cancel</button>
             </footer>
         </div>
     </div>
@@ -124,6 +124,7 @@
             }
 
             close() {
+                withdrawFruit('L')
                 this.elem.classList.toggle('is-active')
                 this.on_close()
             }
