@@ -1,0 +1,59 @@
+:root {
+    --bg: white;
+    --card-bg: #041221;
+  }
+  
+  body {
+    background: var(--bg);
+
+  }
+  
+  .is-horizontal-center {
+    justify-content: center;
+  }
+  
+  .box {
+  
+    background: var(--card-bg);
+  }
+  
+  
+  input::placeholder {
+    color: antiquewhite;
+  }
+  
+  .navbar {
+      padding-left: 77px;
+      padding-right: 77px;
+    background: white;
+  }
+  
+  .navbar-item {
+    color: ghostwhite;
+  }
+  
+  /* Card start*/
+
+  
+  .title.no-padding {
+    margin-bottom: 0 !important;
+  }
+  
+  .footer {
+    background: var(--card-bg);
+    color: ghostwhite;
+  }
+  
+  .footer p,
+  strong {
+    color: ghostwhite
+  }
+  
+  .footer a:hover {
+    color: crimson;
+  }
+  
+  .fa {
+    color: ghostwhite;
+    margin: 10px
+  }
