@@ -1,6 +1,4 @@
 var port;
-  
-let textEncoder = new TextEncoder();
 
 (function() {
     'use strict';
@@ -79,6 +77,7 @@ let textEncoder = new TextEncoder();
   
   function withdrawFruit(str) {
     if (port !== undefined) {
+        let textEncoder = new TextEncoder();
         port.send(textEncoder.encode(str)).catch(error => {
           console.log('Send error: ' + error);
         });
