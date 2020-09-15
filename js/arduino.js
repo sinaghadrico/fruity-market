@@ -1,10 +1,11 @@
 var port;
+  
+let textEncoder = new TextEncoder();
 
 (function() {
     'use strict';
   
-  
-    let textEncoder = new TextEncoder();
+
   
     /*
     let t = new hterm.Terminal();
