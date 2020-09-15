@@ -23,6 +23,11 @@
                 <a href="index.html">
                     <img src="assets/png/Fruity.png" width="120" height="120">
                 </a>
+                <span class="navbar-burger burger" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
             </div>
             <div id="navbarMenu" class="navbar-menu">
                 <div class="navbar-end">
@@ -66,7 +71,9 @@
                 <center>
                     <div class="columns is-vcentered has-background-danger-light">
                         <div class="column">
-                            <strong class="has-text-black"><i class="fas fa-exclamation-triangle"></i> Only send <a target="_blank" href="https://faucet.kovan.network/">Kovan Ether (KETH)</a> </strong>
+                            <strong class="has-text-black"><i class="fas fa-exclamation-triangle"></i> Only send <a
+                                    target="_blank" href="https://faucet.kovan.network/">Kovan Ether (KETH)</a>
+                            </strong>
                         </div>
                     </div>
                     <div class="columns is-vcentered">
@@ -91,17 +98,45 @@
             </section>
             <footer class="modal-card-foot">
                 <button class="button is-success" onclick="withdrawFruit('H')">Mark as paid</button>
-                <button class="button" data-bulma-modal="close">Cancel</button>
+                <button class="button" data-bulma-modal="close" onclick="withdrawFruit('L')">Cancel</button>
             </footer>
         </div>
     </div>
- 
+
     <script src="js/serial.js"></script>
     <script src="js/arduino.js"></script>
     <script src="js/card.js"></script>
 
     <!-- Using Vue to populate cards to reduce redundant code -->
     <script>
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+
         var app = new Vue({
             el: '#app',
             data: {
@@ -150,7 +185,6 @@
             }
 
             on_close() {
-                withdrawFruit('L')
                 var event = new Event('modal:close')
 
                 this.elem.dispatchEvent(event);
