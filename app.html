@@ -28,9 +28,9 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
-                            <a class="button is-primary">
+                            <button id="connect" class="button is-primary">
                                 <strong>Connect Device</strong>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
-                <p class="modal-card-title">Modal title</p>
+                <p class="modal-card-title"></p>
                 <button class="delete" aria-label="close" data-bulma-modal="close"></button>
             </header>
             <section class="modal-card-body">
@@ -90,11 +90,14 @@
                 </center>
             </section>
             <footer class="modal-card-foot">
-                <button class="button is-success">Mark as paid</button>
-                <button class="button" data-bulma-modal="close">Cancel</button>
+                <button class="button is-success" onclick="withdrawFruit('H')">Mark as paid</button>
+                <button class="button" data-bulma-modal="close" onclick="withdrawFruit('L')">Cancel</button>
             </footer>
         </div>
     </div>
+ 
+    <script src="js/serial.js"></script>
+    <script src="js/arduino.js"></script>
     <script src="js/card.js"></script>
 
     <!-- Using Vue to populate cards to reduce redundant code -->
