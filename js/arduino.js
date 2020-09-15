@@ -36,7 +36,7 @@ var port;
         port.connect().then(() => {
           console.log(port);
           console.log('Connected.');
-          connectButton.textContent = 'Disconnect';
+          connectButton.textContent = 'Disconnect Device';
           port.onReceive = data => {
             let textDecoder = new TextDecoder();
             t.io.print(textDecoder.decode(data));
@@ -52,7 +52,7 @@ var port;
       connectButton.addEventListener('click', function() {
         if (port) {
           port.disconnect();
-          connectButton.textContent = 'Connect';
+          connectButton.textContent = 'Connect Device';
           port = null;
         } else {
           serial.requestPort().then(selectedPort => {
