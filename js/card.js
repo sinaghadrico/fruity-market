@@ -2,7 +2,7 @@ let cardsData = [{
     id: 0,
     name: 'Strawberry',
     image: 'assets/png/028-strawberry.png',
-    avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
+    price: 1,
     user: {
       name: 'Okinami',
       handle: 'twitterid',
@@ -14,7 +14,7 @@ let cardsData = [{
     id: 1,
     name: 'Banana',
     image: 'assets/png/006-bananas.png',
-    avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
+    price: 2,
     user: {
       name: 'Okinami',
       handle: 'twitterid',
@@ -26,7 +26,7 @@ let cardsData = [{
     id: 2,
     name: 'Pear',
     image: 'assets/png/024-pear.png',
-    avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
+    price: 2,
     user: {
       name: 'Okinami',
       handle: 'twitterid',
@@ -38,7 +38,7 @@ let cardsData = [{
     id: 3,
     name: 'Dragon Fruit',
     image: 'assets/png/015-dragon fruit.png',
-    avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
+    price: 7,
     user: {
       name: 'Okinami',
       handle: 'twitterid',
@@ -50,7 +50,7 @@ let cardsData = [{
     id: 4,
     name: 'Orange',
     image: 'assets/png/022-orange.png',
-    avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
+    price: 1,
     user: {
       name: 'Okinami',
       handle: 'twitterid',
@@ -62,7 +62,7 @@ let cardsData = [{
     id: 5,
     name: 'Mango',
     image: 'assets/png/021-mango.png',
-    avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
+    price: 5,
     user: {
       name: 'Okinami',
       handle: 'twitterid',
@@ -74,7 +74,7 @@ let cardsData = [{
     id: 6,
     name: 'Lemon',
     image: 'assets/png/020-lemon.png',
-    avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
+    price: 1,
     user: {
       name: 'Okinami',
       handle: 'twitterid',
@@ -86,7 +86,7 @@ let cardsData = [{
     id: 7,
     name: 'Watermelon',
     image: 'assets/png/030-watermelon.png',
-    avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
+    price: 2,
     user: {
       name: 'Okinami',
       handle: 'twitterid',
@@ -98,7 +98,7 @@ let cardsData = [{
     id: 8,
     name: 'Berry',
     image: 'assets/png/008-berry.png',
-    avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
+    price: 2,
     user: {
       name: 'Okinami',
       handle: 'twitterid',
@@ -110,7 +110,7 @@ let cardsData = [{
     id: 9,
     name: 'Pomegranate',
     image: 'assets/png/025-pomegranate.png',
-    avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
+    price: 3,
     user: {
       name: 'Okinami',
       handle: 'twitterid',
@@ -122,7 +122,7 @@ let cardsData = [{
     id: 10,
     name: 'Blueberry',
     image: 'assets/png/009-blueberry.png',
-    avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
+    price: 2,
     user: {
       name: 'Okinami',
       handle: 'twitterid',
@@ -134,7 +134,7 @@ let cardsData = [{
     id: 11,
     name: 'Rose Apple',
     image: 'assets/png/027-rose apple.png',
-    avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
+    price: 4,
     user: {
       name: 'Okinami',
       handle: 'twitterid',
