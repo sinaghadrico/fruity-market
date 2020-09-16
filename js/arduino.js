@@ -2,32 +2,7 @@ var port;
 
 (function() {
     'use strict';
-  
-
-  
-    /*
-    let t = new hterm.Terminal();
-    t.onTerminalReady = () => {
-      console.log('Terminal ready.');
-      let io = t.io.push();
-  
-      io.onVTKeystroke = str => {
-        if (port !== undefined) {
-          port.send(textEncoder.encode(str)).catch(error => {
-            console.log('Send error: ' + error);
-          });
-        }
-      };
-  
-      io.sendString = str => {
-        if (port !== undefined) {
-          port.send(textEncoder.encode(str)).catch(error => {
-            console.log('Send error: ' + error);
-          });
-        }
-      };
-    };
-  */
+    
     document.addEventListener('DOMContentLoaded', event => {
       let connectButton = document.querySelector('#connect');
   

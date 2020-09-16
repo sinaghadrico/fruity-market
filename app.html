@@ -5,14 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cards List - Bulma Templates</title>
+    <title>Fruity Market</title>
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="css/hover-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.0/web3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <link rel="stylesheet" href="css/card.css">
-    <link rel="stylesheet" href="css/hover-min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -92,14 +91,13 @@
                                 <span class="tag is-primary is-light is-large" id="fruit-price"></span>
                             </p>
                         </div>
-
                     </div>
                     <div class="columns is-vcentered has-background-info-light">
                         <div class="column">
-                           <strong class="has-text-black">Contract address -</strong> <strong class="has-text-danger">0x6beFb4C9d54f13Cd43389149D291Ce303D82DA84</strong> 
+                            <strong class="has-text-black">Contract address -</strong> <strong
+                                class="has-text-danger">0x6beFb4C9d54f13Cd43389149D291Ce303D82DA84</strong>
                         </div>
                     </div>
-
                 </center>
             </section>
             <footer class="modal-card-foot">
@@ -112,10 +110,8 @@
     <script src="js/arduino.js"></script>
     <script src="js/card.js"></script>
     <script src="js/web3code.js"></script>
-    <!-- Using Vue to populate cards to reduce redundant code -->
+
     <script>
-
-
         document.addEventListener('DOMContentLoaded', () => {
 
             // Get all "navbar-burger" elements
@@ -141,7 +137,10 @@
             }
 
         });
+    </script>
 
+    <!-- Using Vue to populate cards to reduce redundant code -->
+    <script>
         var app = new Vue({
             el: '#app',
             data: {
@@ -213,8 +212,8 @@
                 console.log(image);
                 document.getElementById("fimg").src = image;
                 let price = item.getAttribute("data-price");
-                amountToPay = Number.parseFloat(price/ethPrice).toPrecision(2);
-                document.getElementById("fruit-price").innerText = 'COST $'+ price + ' - PAY ' + amountToPay + ' ETH';
+                amountToPay = Number.parseFloat(price / ethPrice).toPrecision(2);
+                document.getElementById("fruit-price").innerText = 'COST $' + price + ' - PAY ' + amountToPay + ' ETH';
             })
         })
 
@@ -225,7 +224,6 @@
         mdl.addEventListener("modal:close", function () {
             console.log("closed")
         })
-
 
     </script>
 </body>
