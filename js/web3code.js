@@ -6,52 +6,54 @@ const web3 = new Web3("wss://kovan.infura.io/ws/v3/48d55356a0d24b91855f633e8cf4b
 
 // AggregatorV3Interface ABI
 const aggregatorV3InterfaceABI =
-    [
-        {
-            "inputs": [],
-            "stateMutability": "nonpayable",
-            "type": "constructor"
-        },
-        {
-            "anonymous": false,
-            "inputs": [
-                {
-                    "indexed": false,
-                    "internalType": "address",
-                    "name": "",
-                    "type": "address"
-                },
-                {
-                    "indexed": false,
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "name": "Received",
-            "type": "event"
-        },
-        {
-            "inputs": [],
-            "name": "getLatestPrice",
-            "outputs": [
-                {
-                    "internalType": "int256",
-                    "name": "",
-                    "type": "int256"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "stateMutability": "payable",
-            "type": "receive"
-        }
-    ]
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Received",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "getLatestPrice",
+		"outputs": [
+			{
+				"internalType": "int256",
+				"name": "",
+				"type": "int256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "receive"
+	}
+]
 
 // Price Feed Address
-const addr = "0x6beFb4C9d54f13Cd43389149D291Ce303D82DA84";
+const addr = "0xC8f872aEe06663b900c067Dfd3D87813e6A4F72A";
+
+document.getElementById("address").innerText = addr;
 
 // Set up contract instance
 const priceFeed = new web3.eth.Contract(aggregatorV3InterfaceABI, addr);
