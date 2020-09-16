@@ -25,6 +25,6 @@ contract FruityMarket {
      * Returns the latest price
      */
     function getLatestPrice() public view returns (uint256) {
-            return razor.getResult(1);
+        return razor.getResult(1);
     }
 }
